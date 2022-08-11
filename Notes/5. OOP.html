@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+    <style>
+        h1{text-align: center;}
+        body{
+            font-family: sofia-pro, sans-serif;
+        }
+        p,li{
+            font-size: 15px;
+        }
+        .spacer{
+            height: 20px;
+        }
+        code{
+            display: block;
+            padding: 10px 20px;
+            margin: 4px;
+            background-color: rgb(59, 59, 59);
+            color: rgb(230, 223, 215);
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <h1>Objects and Classes</h1>
+    <h2>Attributes of a class</h2>
+    <p>Attributes can be said to as properties of a class.</p>
+    <code>
+        public class Main {<br>
+            int x = 5;<br>
+            int y = 3;<br>
+        }
+    </code>
+    <p>Here, the variables x and y are the Attributes of the class main.</p>
+    <div class="spacer"></div>
+    <h2>Accessing Attributes</h2>
+    <p>You can access attributes by creating an object of the class, and by using the dot syntax (.)</p>
+    <p><b>Example:</b></p>
+    <code>
+        public class P2 {<br>
+            public static void main(String[] args) {<br>
+                person P = new person();<br>
+                P.name = "Rahul";<br>
+                P.age = 26;<br>
+                System.out.println("Name:"+P.name);<br>
+                System.out.println("Age:"+P.age);<br>
+                <br>
+            }<br>
+        }<br>
+        
+        class person{<br>
+            String name;<br>
+            int age;<br>
+        }<br>
+        
+    </code>
+    <div class="spacer"></div>
+    <h2>Static and non-static attributes/methods</h2>
+    <p>Non-Static variables can be accessed through an object whereas static variables can be.</p>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <p><b>Note:</b> It is a good practice to create an object of a class and access it in another class. In java, we can create a class within a class.</p>
+    <div style="height: 12px;"></div>
+    <h2>Constructor</h2>
+    <p>A constructor in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created.</p>
+    <ul>
+        <li>We cannot call a constructor, it is called automatically.</li>
+        <li>It does not have any data type.</li>
+        <li>It does not return anything.</li>
+        <li>We can have more than one constructor in the same class provided they have different signatures (They should be differentiable through parameters).</li>
+    </ul>
+    <div class="spacer"></div>
+    <h2>this keyword</h2>
+    <p>This keyword is used to refer to an istance. If we have an instance variable and a local variable of same name, using the variable inside a method will always call the local variable. For calling the instance variable we need this keyword.</p>
+    <p><b>Example:</b></p>
+    <code>
+        //using this keyword<br>
+        class demo{<br>
+            int a;<br>
+            int b;<br>
+            demo(int a, int b){<br>
+                this.a = a;<br>
+                this.b = b;<br>
+                // here the a and b in the constructor parameters are local variable.<br>
+                // While writing a we call the local a <br>
+                // while writhing this.a we call the instace a <br>
+            }<br>
+        }<br>
+        public class P3 {<br>
+            public static void main(String[] args) {<br>
+                demo obj = new demo(12, 20);<br>
+                System.out.println(obj.a);<br>
+                System.out.println(obj.b);<br>
+            }<br>
+        }
+    
+    </code>
+    <div class="spacer"></div>
+    <h2>Method overloading</h2>
+    <p>In Java, two or more methods may have the same name if they differ in parameters (different number of parameters, different types of parameters, or both). These methods are called overloaded methods and this feature is called method overloading.</p>
+    <p><b>Examples:</b></p>
+    <code>
+        
+class Summing {<br>
+    public void sum(int a, int b)    {<br>
+        System.out.println(a+b);<br>
+    }<br>
+    public void sum(double a, double b)    {<br>
+        System.out.println(a+b);<br>
+    }<br>
+    public void sum(double a, int b)    {<br>
+        System.out.println(a+b);<br>
+    }<br>
+    public void sum(int a, double b)    {<br>
+        System.out.println(a+b);<br>
+    }<br>
+}<br>
+<br>
+public class P4{<br>
+    public static void main(String[] args) {<br>
+        Summing ob = new Summing();<br>
+        ob.sum(1,2);<br>
+        ob.sum(1.5,8);<br>
+        ob.sum(2.2,8);<br>
+        ob.sum(1, 1.2);<br>
+    }<br>
+}<br>
+    </code>
+    <div class="spacer"></div>
+    <h2>Static variables</h2>
+    <p>If any we create an object of a class, each object has its own copy of the attributes of the class. In case of a static variable, it is not specific to the class. In other words, if we change the value of a static variable, it changes for all the objects. The static variables can be accessed without an object by typing <code style="display: inline; padding: 1px 4px;">class_name.variable_name</code>.</p>
+    <p>In case of methos, if we make a method static, we can access it directly through class without making its object.</p>
+    <p><b>Note:</b> We cannot access a non static variable inside a static method.</p>
+
+</body>
+</html>
