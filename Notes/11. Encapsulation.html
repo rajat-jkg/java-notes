@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation</title>
+    <style>
+        h1{text-align: center;}
+        body{
+            font-family: sofia-pro, sans-serif;
+        }
+        p,li{
+            font-size: 15px;
+        }
+        .spacer{
+            height: 20px;
+        }
+        code{
+            display: block;
+            padding: 10px 20px;
+            margin: 4px;
+            background-color: rgb(59, 59, 59);
+            color: rgb(230, 223, 215);
+            width: fit-content;
+        }
+        .comment{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Encapsulation</h1>
+    <p>If we bind the data through of a class in functions, it can be called as encapsulation</p>
+    <code>
+        class EncapDemo{<br>
+            private String Name;<span class="comment">//we have made the data private so that it cannot be accessed by other class directly</span><br>
+            private int Id;<br>
+            public void setName(String N) {<br>
+                Name=N;<br>
+            }<br>
+            public void setId(int I){<br>
+                Id = I;<br>
+            }<br>
+            public String getName(){<br>
+                return Name;<span class="comment">// we are returning the private data in a public class and it can be accessed by the other class through this method</span><br>
+            }
+            public int getId(){<br>
+                return Id;<br>
+            }<br>
+        }<br>
+        <br>
+        public class P5 {<br>
+            public static void main(String[] args) {<br>
+                EncapDemo o = new EncapDemo();<br>
+                <span class="comment">//from this class, we can access the data of EncapDemo through Methods only. That means we have boung the data with methods.<br></span>
+                <span class="comment">//that is how Encapsulation is implemented<br></span>
+                o.setName("Rajat");<br>
+                o.setId(1222);<br>
+                System.out.println(o.getName());<br>
+                System.out.println(o.getId());<br>
+            }<br>
+        }<br>
+        
+    </code>
+</body>
+</html>
