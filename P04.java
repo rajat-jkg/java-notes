@@ -15,7 +15,7 @@ class Summing {
     }
 }
 
-public class P4{
+public class P04{
     public static void main(String[] args) {
         Summing ob = new Summing();
         ob.sum(1,2);

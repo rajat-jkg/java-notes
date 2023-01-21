@@ -1,5 +1,5 @@
 //lambda function
-class Program15{
+class P10{
     public static void main(String[] args) {
 
         // accessing show method using B class

@@ -17,7 +17,7 @@ class EncapDemo{
     }
 }
 
-public class P5 {
+public class P05 {
     public static void main(String[] args) {
         EncapDemo o = new EncapDemo();
         //from this class, we can access the data of EncapDemo through Methods only. That means we have boung the data with methods.

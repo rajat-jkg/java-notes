@@ -1,6 +1,6 @@
 //use case of attributes
 
-public class P2 {
+public class P02 {
     public static void main(String[] args) {
         person P = new person();
         // calling the attribute with the help of the object

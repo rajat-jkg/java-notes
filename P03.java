@@ -10,7 +10,7 @@ class demo{
         // while writhing this.a we call the instace a 
     }
 }
-public class P3 {
+public class P03 {
     public static void main(String[] args) {
         demo obj = new demo(12, 20);
         System.out.println(obj.a);

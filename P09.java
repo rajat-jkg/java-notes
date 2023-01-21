@@ -1,6 +1,6 @@
 //knowing about interfaces
 
-public class Program14{
+public class P09{
     public static void main(String[] args) {
         a obj = new B();
         obj.hello();
